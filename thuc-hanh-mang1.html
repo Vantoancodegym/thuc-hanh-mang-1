@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh mang 1</title>
+</head>
+<body>
+<form>
+    <input type="text" id="nhapA">
+    <input type="button" value="Add" onclick="functionAdd()">
+    <input type="button" value="Dislay" onclick="functionDislay()">
+    <p id="result"></p>
+
+</form>
+<script>
+    let myarr = [];
+    function functionAdd(){
+        let a = document.getElementById("nhapA").value;
+      myarr.push(a);
+    }
+    function functionDislay(){
+        let str = "";
+        for (let x in myarr){
+            str += "Element" + x + " : "+ myarr[x] + "<br>";
+        }
+        document.getElementById("result").innerHTML = str;
+    }
+</script>
+</body>
+</html>
